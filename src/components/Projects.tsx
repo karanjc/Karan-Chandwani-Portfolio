@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { ExternalLink, Github, Server, Cloud, Zap } from 'lucide-react'
+import { Github, Server, Cloud, Zap } from 'lucide-react'
 
 const Projects = () => {
   const [ref, inView] = useInView({
