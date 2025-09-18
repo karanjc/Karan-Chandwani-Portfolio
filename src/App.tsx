@@ -8,39 +8,15 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 2000)
-    return () => clearTimeout(timer)
-  }, [])
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-dark-bg flex items-center justify-center">
-        <div className="text-center">
-          <div className="text-4xl font-mono text-cyber-blue mb-4 animate-pulse">
-            {'> '}Initializing System...
-          </div>
-          <div className="w-64 h-2 bg-gray-800 rounded-full overflow-hidden">
-            <div className="h-full bg-gradient-to-r from-cyber-blue to-cyber-purple animate-pulse"></div>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
   return (
-    <div className="min-h-screen bg-dark-bg text-white">
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
+    <div style={{ backgroundColor: '#0a0a0a', color: 'white', minHeight: '100vh', padding: '20px' }}>
+      <h1 style={{ color: '#00f5ff', fontSize: '48px', textAlign: 'center' }}>🚀 Portfolio Test</h1>
+      <p style={{ textAlign: 'center', fontSize: '24px' }}>If you see this, React is working!</p>
+      <div style={{ textAlign: 'center', marginTop: '20px' }}>
+        <button style={{ backgroundColor: '#00f5ff', color: 'black', padding: '10px 20px', border: 'none', borderRadius: '5px' }}>
+          Test Button
+        </button>
+      </div>
     </div>
   )
 }
